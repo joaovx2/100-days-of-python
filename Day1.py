@@ -1,2 +1,5 @@
-#day 1 of python, small project to generate the name of a band
-print("Test" + "teste")
+#day 1 
+print("Day 1 - String Manipulation")
+print("String Concatennation is done with the " + " Sign.")
+print('e.g. Print("Hello" + "World")')
+print("New Lines can be created with a \n backlash and a n.") 
