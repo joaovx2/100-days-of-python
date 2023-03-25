@@ -57,12 +57,13 @@ tip_value = input("How much percentage do you want to give it as a tip ? \n")
 people_value = input("How many people are splitting the bill? \n" )
 tip_percentage =  float(tip_value)  / 100
 tip_total = tip_percentage + 1
-print(tip_total)
 bill_value_final =  float(bill_value) * float(tip_total)
 final_result = float(bill_value_final) / int(people_value)
 rounded_result = round(final_result, 2)
-print("The total amount that should be payed per person is " + str(rounded_result))
-
+if rounded_result > 20:
+    print("The total amount that should be payed per person is " + str(rounded_result) + " You just became completely broke")
+else:
+    print("The total amount that sohuld be payed per person is " + str(rounded_result) + " Its a fine amount to pay ")
 
 
 
