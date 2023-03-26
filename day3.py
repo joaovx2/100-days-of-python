@@ -74,3 +74,33 @@ else:
 #in this case only one of the conditions need to be true, it will check if A is true, if its false it will go to be, if its false it will go to C
 
 
+#pizza delivery program for fun
+print("Python pizza delivery program")
+size = input("What size of pizza do you want, L, M or S? ?\n")
+add_peperoni = input("Do you want to add peperoni ? Y or N \n")
+extra_cheese = input("Do you want to add extra cheese ? Y or N \n")
+total_payment = 0
+if size == "L":
+ total_payment+= 25
+elif size == "M":
+ total_payment+=20
+else:
+ total_payment+=15
+if add_peperoni == "Y" and size == "L":
+    total_payment+=3
+elif add_peperoni == "Y" and size  == "M" or size == "S":
+    total_payment +=2
+else:
+    print("No pepperoni was added")
+if extra_cheese == "Y":
+    print("Adding Cheese")
+    total_payment +=1
+    print(total_payment)
+else:
+    print("No cheese added")
+    print(total_payment)
+##
+
+
+
+    
