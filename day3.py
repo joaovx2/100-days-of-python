@@ -71,7 +71,8 @@ else:
 #DOES B, in this case, a doesnt need to be true to execute B
 #ELSE
 #DOES C
-#in this case only one of the conditions need to be true, it will check if A is true, if its false it will go to be, if its false it will go to C
+#in this case only one of the conditions need to be true, it will check if A is true, if its false it will go to be, if its false it will go to C Once a true statment is found
+#it will skip the if block and go to the part of the code
 
 
 #pizza delivery program for fun
@@ -100,6 +101,43 @@ else:
     print("No cheese added")
     print(total_payment)
 ##
+
+
+#love calculator
+print("Welcome to the love calculator")
+name1 = input("What is your name ?\n")
+name2 = input("what is their name \n")
+combinaned_name = name1 + name2
+lower_name = combinaned_name.lower()
+t = lower_name.count("t")
+r = lower_name.count("r")
+u = lower_name.count("u")
+e = lower_name.count("e")
+true = t + r + u + e
+l = lower_name.count("l")
+o = lower_name.count("o")
+v = lower_name.count("v")
+e = lower_name.count("e")
+love = t + r + u + e
+love_score = str(true)  + str(love)
+love_score_int = int(love_score)
+##can also be done with
+# love_score = int(str(true)  + str(love))
+#to wrap it around in the same line, changing the data type twice
+if love_score_int < 10 or love_score_int > 90:
+    print(f"your love score is {love_score}, you go together like mentos and coke")
+elif love_score_int >= 40 and love_score_int <=50:
+    print(f"your love score is {love_score}, you are alright together")
+else:
+    print(f"your love score is {love_score}, you both are dogshit together")
+    
+    
+    
+
+
+
+
+
 
 
 
