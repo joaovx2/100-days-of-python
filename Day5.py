@@ -37,9 +37,11 @@ random_selected = names_list[random_index]
 print(f"Today {random_selected}, will be paying the bill")
 ##test of using random function to print out someone from a list
 
-
-
-
+##using the choice function
+names_string = input("Give me everyone's names separated by a comma and a space.")
+names_list = names_string.split(", ")
+print("The person that will be paying the bill is", random.choice(names_list))
+##the choice function will return a random value of choice from a list
 
 
 
