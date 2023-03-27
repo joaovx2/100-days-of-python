@@ -26,7 +26,7 @@ print(list[-1])
 print(len(list))
 
 ##banker roullete test
-names_string = input("Give me everyone's names separated by a comma and a space.")
+names_string = input("Give me everyone's names separated by a comma and a space.\n")
 names_list = names_string.split(", ")
 #split function splits a string using a divider, in this case a ", ", turning the names_list variable into a list type variable
 random_index = random.randrange(len(names_list))
@@ -38,10 +38,33 @@ print(f"Today {random_selected}, will be paying the bill")
 ##test of using random function to print out someone from a list
 
 ##using the choice function
-names_string = input("Give me everyone's names separated by a comma and a space.")
+names_string = input("Give me everyone's names separated by a comma and a space.\n")
 names_list = names_string.split(", ")
 print("The person that will be paying the bill is", random.choice(names_list))
 ##the choice function will return a random value of choice from a list
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+dirty_dozen = [fruits, vegetables]
+print(dirty_dozen[0][1])
+#the first [] will tell u what listen to print out from, 0 being fruits, 1 being vegetables and the second [] will tell u which element you wanna print
+
+row_0 = [" ", " ", " "]
+row_1 = [" ", " ", " "]
+row_2 = [" ", " ", " "]
+matrix = [row_0,row_1, row_2]
+print(f"{row_0},\n{row_1},\n{row_2}")
+position = input("Where do you wanna place the X ? write it as 31, row and collumn ")
+position_row = int(position[0])
+position_column = int(position[1])
+matrix[position_column - 1][position_row -1] = " X "
+print(f"{row_0},\n{row_1},\n{row_2}")
+
+
+
+
+
+
+
 
 
 
