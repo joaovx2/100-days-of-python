@@ -53,17 +53,60 @@ row_1 = [" ", " ", " "]
 row_2 = [" ", " ", " "]
 matrix = [row_0,row_1, row_2]
 print(f"{row_0},\n{row_1},\n{row_2}")
-position = input("Where do you wanna place the X ? write it as 31, row and collumn ")
+position = input("Where do you wanna place the X ? write it as row and collumn ")
 position_row = int(position[0])
 position_column = int(position[1])
 matrix[position_column - 1][position_row -1] = " X "
 print(f"{row_0},\n{row_1},\n{row_2}")
 
 
+##rock-paper-scissor
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
 
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
 
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
 
-
+game_images = [rock, paper, scissors]
+choice = int(input("Choose rock, paper or scissor, 1 for rock, 2 for paper or 3 for scissor\n"))
+if choice == 0 or choice > 3:
+    print("You typed something invalid")
+else:
+    print(game_images[choice - 1])
+    computer_choice = random.randint(1,3)
+    print(f"Computer choose: ")
+    print(game_images[computer_choice - 1])
+    if choice == 1  and computer_choice == 3:
+        print("You Win")
+    elif computer_choice == 1 and computer_choice == 3:
+        print("You lose")
+    elif computer_choice > choice:
+        print("You Lose")
+    elif choice > computer_choice:
+        print("You win")
+    elif computer_choice == choice:
+        print("Its a Draw")
 
 
 
