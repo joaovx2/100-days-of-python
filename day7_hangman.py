@@ -70,9 +70,16 @@ while  game_over == False: ##while NOT game_over: also works the same
         if letter == guess_letter: #this checks if the letter is equal to the guess
             display[position] = letter  #replaces the blanket position with the letter
     print(f"{''.join(display)}") ##displays the chosen word list with the letter replacing
+    if guess_letter  not in choosen_word: ##checks if the letter is NOT in the choosen word
+        lives -= 1 ##subtracts a life
+        print("You guess didnt match, you lost a live.") #tells you, you lost a life
+        print(stages[lives])#prints the asci art for the stages
+        if lives == 0: #when the life is = 0 
+            print("You lost the game.") #shows you lost the game
+            game_over = True #switches the game_over to true leaving the program
     if "_" not in display: ##checks if there is empty blanekts
         game_over = True #if there no more blanket spaces
         print("Game Over.") #show that its game over
-        
+    
 
 
