@@ -1,5 +1,6 @@
 ##ceaserchiper  encrypter
 import day8_imports
+import time
 print(day8_imports.logo)
 running = True
 while running == True:
@@ -23,3 +24,4 @@ while running == True:
     if answer == "no":
         running = False
         print("Adios")
+        time.sleep(3)
