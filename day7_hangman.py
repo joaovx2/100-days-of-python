@@ -1,60 +1,5 @@
 ##day about loops and functions
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+import day7_hangman_art
 lives = 6
 choosen_word = input("Type the word that the user will be guessing : ").lower()
 print(f"Choosen word is {choosen_word}")
@@ -72,14 +17,15 @@ while  game_over == False: ##while NOT game_over: also works the same
     print(f"{''.join(display)}") ##displays the chosen word list with the letter replacing
     if guess_letter  not in choosen_word: ##checks if the letter is NOT in the choosen word
         lives -= 1 ##subtracts a life
-        print("You guess didnt match, you lost a live.") #tells you, you lost a life
-        print(stages[lives])#prints the asci art for the stages
+        print("Your guess didnt match, you lost a live.") #tells you, you lost a life
+        print(day7_hangman_art.stages[lives])#prints the asci art for the stages
         if lives == 0: #when the life is = 0 
-            print("You lost the game.") #shows you lost the game
+            print("Game Over! You died.") #shows you lost the game
             game_over = True #switches the game_over to true leaving the program
     if "_" not in display: ##checks if there is empty blanekts
         game_over = True #if there no more blanket spaces
-        print("Game Over.") #show that its game over
-    
+        print("You won the game! Congrats.") #show that its game over
+
+
 
 
