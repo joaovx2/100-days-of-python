@@ -44,7 +44,7 @@
 #there is a double = sig checking for equality, resulting in the variable words_per_page keeping the 0 value and not changing
 #solution is replace the double = with just an = 
 
-# #Use a Debugger
+
 # def mutate(a_list):
 #   b_list = []
 #   for item in a_list:
