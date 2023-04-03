@@ -23,7 +23,7 @@ def set_difficulty():
   elif level =="hard":
     return HARD_LEVEL_TURNS
   else:
-      print("You gave a invalid input")
+      print("You gave a invalid input, please type easy or hard only.")
       return set_difficulty() ##returns to the beginning in case a invalid input was typed
 
 
@@ -43,8 +43,5 @@ def game():
       return
     elif guess != answer:
       print("Guess again.")
-      
-      
-      
 game() #game function that contains the game
  
