@@ -11,8 +11,8 @@ class QuizBrain:
     def next_question(self): #method 2, shows the question, and increases the quesiton number
         current_question = self.question_list[self.question_number]
         self.question_number += 1
-        user_answer = input(f"Q.{self.question_number}: {current_question.text} (True/False): ").lower()
-        self.check_answer(user_answer, current_question.answer)
+        user_answer = input(f"Q.{self.question_number}: {current_question.text} (True/False): ")
+        self.check_answer(user_answer, current_question.answer) #calls out the method to check the answer that was definied in the class 
 
     def check_answer(self, user_answer, correct_answer): #checks if the answer is right or wrong, increases the score in case it is 
         if user_answer.lower() == correct_answer.lower():
